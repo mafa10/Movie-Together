@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store/store'
 import axios from 'axios'
 
-const API = 'http://localhost:8080/api'
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8080/api'
 
 export default function HomePage() {
   const navigate = useNavigate()

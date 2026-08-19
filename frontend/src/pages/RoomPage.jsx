@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useStore } from '../store/store'
 import RoomView from '../components/RoomView'
 
-const API = 'http://localhost:8080/api'
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8080/api'
 
 export default function RoomPage() {
   const { code } = useParams()
